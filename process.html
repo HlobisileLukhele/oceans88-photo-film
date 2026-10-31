@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How we work · Oceans88 Labs Photo &amp; Film</title>
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(localStorage.getItem('o88-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body data-page="process">
+<main>
+  <section class="wrap page-hero">
+    <span class="eyebrow">How we work</span>
+    <h1><span>No guesswork. No surprises.</span><span><em>Just good light.</em></span></h1>
+    <p class="lede">The same six-step process Oceans88 Labs uses on every project, adapted for the shoot. You always know what's being shot, when you'll see it and what it costs.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(56px,8vw,104px)">
+    <div class="steps-grid" id="timeline"></div>
+  </section>
+
+  <section class="section wrap tight">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Turnaround</span>
+        <h2>When you'll <em>have it.</em></h2>
+      </div>
+      <span class="meta">Working days from shoot day</span>
+    </div>
+    <div class="compare-wrap reveal">
+      <table class="compare">
+        <thead><tr><th>Deliverable</th><th>Preview</th><th>Final</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>Photo gallery</td><td>10 selects in 48 hours</td><td>5–7 days</td><td>JPG, web + print sizes</td></tr>
+          <tr><td>Event highlights</td><td>Same night or next morning</td><td>5 days</td><td>JPG, social crops</td></tr>
+          <tr><td>Brand or menu film</td><td>First cut in 7 days</td><td>10–14 days</td><td>MP4 4K + 1080p</td></tr>
+          <tr><td>Vertical cuts</td><td>With first cut</td><td>10–14 days</td><td>MP4 9:16, captions</td></tr>
+          <tr><td>Rush delivery</td><td>On request</td><td>From 48 hours</td><td>+25% on package</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section wrap faq-section">
+    <div class="faq-head reveal">
+      <span class="eyebrow">Questions</span>
+      <h2>Asked <em>most often.</em></h2>
+      <p class="lede">If yours isn't here, WhatsApp us. We reply within 24 hours.</p>
+    </div>
+    <div class="faq reveal">
+        <details open><summary>Do you travel outside Durban?</summary><p>Yes. We shoot across KwaZulu-Natal as standard. Travel beyond 50 km from Durban is quoted per kilometre, and further afield we quote travel and accommodation up front.</p></details>
+        <details><summary>Who brings the props and styling?</summary><p>For food and beverages we bring surfaces, backdrops and basic props. A food or prop stylist can be added to any package. You supply the product and, where possible, the person who makes it.</p></details>
+        <details><summary>Can we use the photos and films anywhere?</summary><p>Yes. Every package includes a perpetual licence for your own marketing: web, social, print, menus and in-store. Paid media buys and billboards are included too. Resale to third parties is not.</p></details>
+        <details><summary>How many revisions do we get on video?</summary><p>Two rounds of changes are included on every film. We share a private link where you can leave comments on the exact second you want changed.</p></details>
+        <details><summary>What do you need to book a date?</summary><p>A signed quote and a 50% deposit. The balance is due on delivery of final files. Dates move once without charge with 72 hours' notice.</p></details>
+        <details><summary>Do we need model releases?</summary><p>For staff, guests and talent who appear clearly in the work, yes. We bring release forms and handle them on the day, in line with POPIA.</p></details>
+      </div>
+  </section>
+
+  <section class="book">
+    <div class="wrap">
+      <div style="display:grid;gap:20px">
+        <span class="eyebrow">Step one</span>
+        <h2>A 30-minute call. <em>No pitch.</em></h2>
+        <p class="lede">Tell us what you want people to feel. We'll come back with a shot list and a fixed quote.</p>
+      </div>
+      <div class="contact">
+        <a class="btn solid" href="contact.html" style="justify-self:start">Book the call <span class="arr">→</span></a>
+        <a href="mailto:hello@oceans88labs.co.za">hello@oceans88labs.co.za</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+var STEPS = [
+  ['Discovery call', '30 minutes to understand the goal, the audience and where the work will live: menu, app, billboard or Reels.', 'Free · within 2 days of your message'],
+  ['Proposal & shot list', 'A fixed quote and a shot list: every dish, drink, moment or look we will capture, and in which formats.', 'Approved before any deposit'],
+  ['Moodboard & prep', 'Light, colour and styling references so you know exactly how it will look. We confirm props, people and timings.', '1 week before the shoot'],
+  ['Shoot day', 'Photographer and, when filming, a camera operator on site. We tether to a screen so you can approve frames as we go.', 'Half or full day'],
+  ['Edit & delivery', 'Colour grading, retouching, sound and music. Files arrive in a private gallery, sized for every place you will use them.', '5–14 working days'],
+  ['Monthly content', 'Optional retainer: a short shoot every month so your menu, feed and campaigns always have fresh work.', 'From R6,500 per month']
+];
+document.addEventListener('DOMContentLoaded', function () {
+  var el = document.getElementById('timeline');
+  el.innerHTML = STEPS.map(function (s, i) {
+    return '<article class="step-card"><div class="step-body"><span class="n">0' + (i + 1) + '</span><h3>' + s[0] + '</h3><p>' + s[1] + '</p><span class="meta">' + s[2] + '</span></div></article>';
+  }).join('');
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio · Oceans88 Labs Photo &amp; Film</title>
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(localStorage.getItem('o88-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body data-page="portfolio">
+<main>
+  <section class="wrap page-hero">
+    <span class="eyebrow">The portfolio</span>
+    <h1><span>Explore the work.</span><span><em>Plated, poured, celebrated.</em></span></h1>
+    <p class="lede">Every project here was shot, filmed and edited by Oceans88 Labs. Browse by what we shot, or switch between photo and film.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(72px,10vw,136px)">
+    <div class="filters">
+      <div class="chips" id="cat-chips" role="group" aria-label="Filter by category"></div>
+      <div class="seg" id="med-chips" role="group" aria-label="Filter by medium">
+        <button class="chip" type="button" data-med="all">All</button>
+        <button class="chip" type="button" data-med="photo">Photo</button>
+        <button class="chip" type="button" data-med="video">Video</button>
+      </div>
+    </div>
+    <div class="count-row">
+      <span class="meta" id="count" aria-live="polite"></span>
+      <button class="clear" type="button" id="clear">Clear filters</button>
+    </div>
+    <div class="grid" id="work-grid"></div>
+    <p class="empty" id="empty" hidden>Nothing here yet for that mix. Try another category or switch to All.</p>
+  </section>
+
+  <section class="book">
+    <div class="wrap">
+      <div style="display:grid;gap:20px">
+        <span class="eyebrow">Seen something you like?</span>
+        <h2>Let's shoot <em>yours next.</em></h2>
+      </div>
+      <div class="contact">
+        <a class="btn solid" href="contact.html" style="justify-self:start">Book a shoot <span class="arr">→</span></a>
+        <a href="packages.html">Or compare packages first</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="site.js"></script>
+</body>
+</html>

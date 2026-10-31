@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What we do · Oceans88 Labs Photo &amp; Film</title>
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(localStorage.getItem('o88-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body data-page="services">
+<main>
+  <section class="wrap page-hero">
+    <span class="eyebrow">What we do</span>
+    <h1><span>Four specialities.</span><span><em>Photo and film for each.</em></span></h1>
+    <p class="lede">We focus on the things people eat, drink, wear and celebrate. Every service can be booked as photo, video, or both from one crew on one day.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(56px,8vw,96px)">
+    <div class="svc-list" id="svc-list"></div>
+  </section>
+
+  <div id="svc-detail"></div>
+
+  <section class="section wrap tight">
+    <div class="split">
+      <div class="copy reveal">
+        <span class="eyebrow">Photo + video, one crew</span>
+        <h2>Book both. <em>Save a day.</em></h2>
+        <p class="lede">When we shoot stills and film together we light once, style once and share the same shot list. It's quicker for you and usually cheaper than two separate bookings.</p>
+        <ul class="ticks">
+          <li>One shoot day, one point of contact</li>
+          <li>Matching look across photos, films and vertical cuts</li>
+          <li>Licensed music and captions included on every film</li>
+        </ul>
+        <div><a class="link-arrow" href="packages.html">See combined packages</a></div>
+      </div>
+      <div class="frame reveal" style="aspect-ratio:4/3"><img src="media/work/food-prawn-platter.jpg" alt="Prawn and rice-paper roll platter with citrus and a blue cocktail" loading="lazy"></div>
+    </div>
+  </section>
+
+  <section class="book">
+    <div class="wrap">
+      <div style="display:grid;gap:20px">
+        <span class="eyebrow">Not sure which?</span>
+        <h2>Tell us the goal. <em>We'll suggest the shoot.</em></h2>
+      </div>
+      <div class="contact">
+        <a class="btn solid" href="https://wa.me/27679707137" target="_blank" rel="noopener" style="justify-self:start">WhatsApp us <span class="arr">→</span></a>
+        <a href="mailto:hello@oceans88labs.co.za">hello@oceans88labs.co.za</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+var SVC = {
+  lifestyle: { h: 'Lifestyle', em: 'Real people, real light.', from: 'R4,500', turn: 'Gallery in 5–7 working days',
+    copy: 'Lookbooks, personal brand portraits and campaign imagery shot on location around Durban and the coast. We direct gently so people look like themselves.',
+    inc: ['Location scouting and a shot list', 'Direction for non-models', 'Natural-light and flash setups', 'Web and print exports in every crop you need'],
+    imgs: ['photo-1529156069898-49953e39b3ac', 'photo-1582298538104-fe2e74c27f59', 'photo-1606416132922-22ab37c1231e'] },
+  events: { h: 'Events', em: 'First guest to last song.', from: 'R4,500', turn: 'Highlights in 24 hours',
+    copy: 'Tastings, launches, catered evenings and private parties. Discreet coverage of the people, the plates and the pours, with fast highlights for social.',
+    inc: ['One or two photographers, optional camera operator', 'Same-night or next-morning highlights', 'Multi-camera speaker capture for conferences', 'Recap film and 9:16 cuts'],
+    imgs: ['work/events-ndu-latte-sign', 'work/events-ndu-teapots-redespresso', 'work/events-ndu-cake-table'] },
+  food: { h: 'Food', em: 'Shot to be tasted.', from: 'R3,500', turn: 'Gallery in 5 working days',
+    copy: 'Menus, delivery-app listings, cookbooks and campaigns. We work with your chef at the pass so every plate is shot at its best, minutes after it is made.',
+    inc: ['Menu photography, per dish or full menu', 'Top-down, 45° and hero angles', 'Props and surfaces on request', 'Crops ready for Uber Eats, Mr D and print'],
+    imgs: ['work/food-canapes-table', 'work/food-tasting-boards', 'work/food-sparkling-canape'] },
+  beverages: { h: 'Beverages', em: 'From bean to bottle.', from: 'R3,500', turn: 'Gallery in 5 working days',
+    copy: 'Coffee, cocktails, juices, wine and spirits. Latte art and the roast, backlit glass, condensation and the pour, captured as stills and 120fps slow-motion film.',
+    inc: ['Café, bar, roastery and studio setups', 'Latte art, pours and slow-motion splashes', 'Pack shots on white for e-commerce', 'Vertical cuts for Reels'],
+    imgs: ['work/beverages-espresso-martinis-bar', 'work/beverages-pink-cup-latte', 'work/beverages-iced-coffee-pour'] }
+};
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('svc-list').innerHTML = CATEGORIES.map(function (c, i) {
+    var s = SVC[c.id];
+    return '<a class="svc-row" href="#' + c.id + '"><span class="n">0' + (i + 1) + '</span><div><h3>' + s.h + '</h3><p>' + c.line + '</p></div>' +
+      '</a>';
+  }).join('');
+  document.getElementById('svc-detail').innerHTML = CATEGORIES.map(function (c, i) {
+    var s = SVC[c.id];
+    return '<section class="section wrap" id="' + c.id + '" style="padding-top:clamp(48px,6vw,80px);scroll-margin-top:90px"><hr class="rule" style="margin-bottom:clamp(48px,6vw,80px)">' +
+      '<div class="split' + (i % 2 ? ' rev' : '') + '">' +
+        '<div class="mosaic reveal">' + s.imgs.map(function (id, k) { return '<div class="frame"><img src="' + IMG(id, k ? 800 : 1100) + '" alt="' + s.h + ' photography" loading="lazy"></div>'; }).join('') + '</div>' +
+        '<div class="copy reveal"><span class="eyebrow">' + s.h + ' · Photo &amp; video</span><h2>' + s.h + '. <em>' + s.em + '</em></h2>' +
+        '<p class="lede">' + s.copy + '</p><ul class="ticks">' + s.inc.map(function (x) { return '<li>' + x + '</li>'; }).join('') + '</ul>' +
+        '<span class="meta">' + s.turn + '</span>' +
+        '<div style="display:flex;flex-wrap:wrap;gap:12px"><a class="btn solid" href="portfolio.html#' + c.id + '">See ' + s.h.toLowerCase() + ' work <span class="arr">→</span></a><a class="btn line" href="packages.html">Packages</a></div></div>' +
+      '</div></section>';
+  }).join('');
+  document.querySelectorAll('#svc-detail .reveal').forEach(function (el) { el.classList.add('in'); });
+});
+</script>
+</body>
+</html>

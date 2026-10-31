@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oceans88 Labs · Photo &amp; Film, Durban</title>
+<meta name="description" content="Lifestyle, events, food and beverage photography and video in Durban, by Oceans88 Labs.">
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(localStorage.getItem('o88-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body data-page="home">
+<main>
+
+  <section class="hero-slides hero-video" id="hero-video" aria-label="Behind the scenes with the Oceans88 Labs crew">
+    <div class="slides">
+      <video class="slide on" muted loop playsinline preload="auto" aria-hidden="true"
+        poster="media/work/hero-crew-poster.jpg" data-poster-tall="media/work/hero-crew-poster-tall.jpg"
+        data-wide="media/vid/hero-crew-wide.mp4" data-tall="media/vid/hero-crew-tall.mp4"></video>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-center">
+      <span class="eyebrow">Photo &amp; Film · Durban</span>
+      <h1><span>Stories you can taste.</span><span><em>Light you can feel.</em></span></h1>
+      <p class="lede">Lifestyle, events, food and beverages, photographed and filmed for brands that want people to stop scrolling and walk in.</p>
+      <div class="hero-ctas">
+        <a class="btn solid" href="portfolio.html">View the work <span class="arr">→</span></a>
+        <a class="btn line" href="packages.html">See packages</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap after-hero">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">What we shoot</span>
+        <h2>Four worlds, <em>one eye.</em></h2>
+      </div>
+    </div>
+    <div class="cats reveal" id="cats"></div>
+  </section>
+
+  <section class="section wrap">
+    <div class="split">
+      <div class="mosaic reveal">
+        <div class="frame crew"><img src="media/work/crew-photographer-cafe.jpg" alt="Oceans88 Labs photographer shooting inside a pink and teal café" loading="lazy"></div>
+        <div class="frame crew"><img src="media/work/crew-bar-photographer.jpg" alt="Oceans88 Labs photographer shooting an espresso martini while the barista directs" loading="lazy"></div>
+        <div class="frame crew"><img src="media/work/crew-flatlay-coffee.jpg" alt="Oceans88 Labs photographer framing a coffee and magazine flat lay" loading="lazy"></div>
+      </div>
+      <div class="copy reveal">
+        <span class="eyebrow">How we work</span>
+        <h2>No guesswork. <em>Just good light.</em></h2>
+        <p class="lede">Six clear steps from first call to final files. You see a shot list before we arrive, and photos within days, not weeks.</p>
+        <ul class="ticks">
+          <li>Shot list and moodboard approved before shoot day</li>
+          <li>Preview selects within 48 hours</li>
+          <li>Full gallery in 5–7 working days, films in 10–14</li>
+          <li>You own every file we hand over</li>
+        </ul>
+        <div><a class="link-arrow" href="process.html">See the process</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap tight reels">
+    <div class="section-head reveal">
+      <div>
+        <span class="eyebrow">Reels</span>
+        <h2>Made for the feed. <em>Cut for every platform.</em></h2>
+        <p class="lede">Vertical edits for social, cut from the same shoot as your photos.</p>
+      </div>
+    </div>
+    <div class="verticals reveal" id="reels"></div>
+  </section>
+
+  <section class="section wrap tight">
+    <div class="quote reveal" id="quote">
+      <span class="eyebrow">Clients say</span>
+      <blockquote></blockquote>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+        <cite class="meta" style="font-style:normal"></cite>
+        <div class="quotes-nav"><button type="button" id="q-prev" aria-label="Previous quote">←</button><button type="button" id="q-next" aria-label="Next quote">→</button></div>
+      </div>
+    </div>
+  </section>
+
+
+
+</main>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('cats').innerHTML = CATEGORIES.map(function (c) {
+    return '<a class="cat" href="portfolio.html#' + c.id + '"><div class="frame">' +
+      '<img src="' + IMG(c.cover, 700) + '" alt="' + c.name + '" loading="lazy">' +
+      '</div><b>' + c.name + '</b><p>' + c.line + '</p></a>';
+  }).join('');
+});
+</script>
+</body>
+</html>

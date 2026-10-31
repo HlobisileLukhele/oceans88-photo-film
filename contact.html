@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact · Oceans88 Labs Photo &amp; Film</title>
+<link rel="icon" href="media/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{if(localStorage.getItem('o88-theme')==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
+</head>
+<body data-page="contact">
+<main>
+  <section class="wrap page-hero">
+    <span class="eyebrow">Book a shoot</span>
+    <h1><span>Let's plan your shoot.</span><span><em>Tell us what you need.</em></span></h1>
+    <p class="lede">Send a date, a location and what you're shooting. We reply within 24 hours with a shot list and a quote.</p>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(72px,10vw,120px)">
+    <div class="contact-grid">
+      <aside class="info-card reveal">
+        <span class="eyebrow">A good shoot starts with a chat</span>
+        <h2>Get in touch</h2>
+        <p class="info-lede">Talk to us about a menu launch, an event, a product range or monthly content for your feed.</p>
+        <dl class="info-rows">
+          <div><dt>WhatsApp</dt><dd><a href="https://wa.me/27679707137" target="_blank" rel="noopener">+27 67 970 7137</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:hello@oceans88labs.co.za">hello@oceans88labs.co.za</a></dd></div>
+          <div><dt>Visit</dt><dd>9 Gowrans Gardens, Newlands East, Durban, 4051<br><span class="info-note">Studio visits by appointment. We shoot on location across KZN.</span></dd></div>
+          <div><dt>Hours</dt><dd>Mon–Fri 08:00–18:00<br>Sat 09:00–14:00</dd></div>
+          <div><dt>Follow</dt><dd class="socials">
+            <a href="https://www.instagram.com/oceans88_labs" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></svg></a>
+            <a href="https://facebook.com/oceans88labs" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H8v3h2.5V21z" fill="currentColor"/></svg></a>
+            <a href="https://linkedin.com/company/oceans88-labs" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.9 8.7H3.8V20h3.1zM5.3 3.6a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6zM20.2 13.6c0-3-1.6-5.1-4.4-5.1-1.4 0-2.4.8-2.8 1.5V8.7H10V20h3.1v-5.6c0-1.5.3-2.9 2.1-2.9s1.9 1.7 1.9 3V20h3.1z" fill="currentColor"/></svg></a>
+          </dd></div>
+        </dl>
+      </aside>
+
+      <div class="form-card reveal">
+        <span class="eyebrow">Send an enquiry</span>
+        <h2>Start a conversation.</h2>
+        <p class="muted">Tell us a little about yourself and the shoot you have in mind.</p>
+
+        <form id="enquiry" novalidate>
+          <div class="fields">
+            <div class="field"><label for="f-name">Full name <b>*</b></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+            <div class="field"><label for="f-email">Email <b>*</b></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="field"><label for="f-phone">Phone or WhatsApp <span>(optional)</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="f-company">Business or venue <span>(optional)</span></label><input id="f-company" name="company" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="f-topic">I'd like to book <b>*</b></label>
+              <select id="f-topic" name="topic" required>
+                <option value="">Choose one</option>
+                <option>Portraits &amp; lifestyle</option>
+                <option>Wedding</option>
+                <option>Event coverage</option>
+                <option>Commercial or product</option>
+                <option>Food photography</option>
+                <option>Beverage photography</option>
+                <option>Videography</option>
+                <option>Monthly social media</option>
+                <option>Something else</option>
+              </select></div>
+            <div class="field"><label for="f-date">Preferred date <span>(optional)</span></label><input id="f-date" name="date" type="date"></div>
+            <div class="field wide"><label for="f-location">Location <span>(optional)</span></label><input id="f-location" name="location" type="text" placeholder="Venue, town or area"></div>
+            <div class="field wide"><label for="f-message">Tell us about the shoot <b>*</b></label><textarea id="f-message" name="message" rows="6" required placeholder="What are we shooting, roughly how many dishes, drinks or guests, and where will the photos be used?"></textarea></div>
+          </div>
+          <p class="form-error" id="form-error" hidden>Please fill in your name, a valid email, what you'd like to book and a short message.</p>
+          <button class="submit" type="submit">Send enquiry</button>
+          <p class="form-note">We only use your details to reply to your enquiry and never share them with third parties.</p>
+        </form>
+
+        <div class="sent" id="sent" hidden>
+          <h3>Almost there, <span id="sent-name"></span>.</h3>
+          <p class="muted">Your enquiry is ready. Choose how to send it and it opens with everything filled in.</p>
+          <div class="sent-actions">
+            <a class="submit" id="send-wa" href="https://wa.me/27679707137" target="_blank" rel="noopener">Send on WhatsApp</a>
+            <a class="btn line" id="send-mail" href="mailto:hello@oceans88labs.co.za">Send by email</a>
+          </div>
+          <button class="clear" type="button" id="edit-enquiry">Edit my enquiry</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="data.js"></script>
+<script src="site.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('enquiry');
+  var topic = document.getElementById('f-topic');
+  /* package pages link here with #portraits, #weddings, #events, #commercial, #video or #social to preselect */
+  var pick = { portraits: 'Portraits & lifestyle', weddings: 'Wedding', events: 'Event coverage', commercial: 'Commercial or product', video: 'Videography', social: 'Monthly social media' }[location.hash.slice(1)];
+  if (pick) topic.value = pick;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var v = function (id) { return document.getElementById(id).value.trim(); };
+    var email = v('f-email');
+    var ok = v('f-name') && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) && v('f-topic') && v('f-message');
+    document.getElementById('form-error').hidden = !!ok;
+    if (!ok) return;
+    var opt = function (label, id) { return v(id) ? label + ': ' + v(id) : null; };
+    var lines = [
+      'Hi Oceans88 Labs, I would like to book: ' + v('f-topic'),
+      'Name: ' + v('f-name'),
+      'Email: ' + email,
+      opt('Phone', 'f-phone'),
+      opt('Business', 'f-company'),
+      opt('Preferred date', 'f-date'),
+      opt('Location', 'f-location'),
+      '',
+      v('f-message')
+    ].filter(function (l) { return l !== null; });
+    var text = lines.join('\n');
+    document.getElementById('send-wa').href = 'https://wa.me/27679707137?text=' + encodeURIComponent(text);
+    document.getElementById('send-mail').href = 'mailto:hello@oceans88labs.co.za?subject=' + encodeURIComponent('Shoot enquiry: ' + v('f-topic')) + '&body=' + encodeURIComponent(text);
+    document.getElementById('sent-name').textContent = v('f-name').split(' ')[0];
+    form.hidden = true;
+    document.getElementById('sent').hidden = false;
+  });
+  document.getElementById('edit-enquiry').addEventListener('click', function () {
+    document.getElementById('sent').hidden = true;
+    form.hidden = false;
+  });
+});
+</script>
+</body>
+</html>
